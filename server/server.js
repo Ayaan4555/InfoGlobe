@@ -131,41 +131,7 @@ app.get("/top-headlines", async (req, res) => {
   res.status(result.status).json(result);
 });
 
-// app.get("/country/:iso", async (req, res) => {
-//   let pageSize = parseInt(req.query.pageSize) || 80;
-//   let page = parseInt(req.query.page) || 1;
-//   const country = req.params.iso;
 
-//   let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.API_KEY}&page=${page}&pageSize=${pageSize}`;
-//   const result = await makeApiRequest(url);
-//   res.status(result.status).json(result);
-// });
-
-// app.get("/sources", async (req, res) => {
-//   let pageSize = parseInt(req.query.pageSize) || 80;
-//   let page = parseInt(req.query.page) || 1;
-//   let country = req.query.country || "us";
-
-//   let url = `https://newsapi.org/v2/sources?country=${country}&language=en&page=${page}&pageSize=${pageSize}&apiKey=${process.env.API_KEY}`;
-//   const result = await makeApiRequest(url);
-//   res.status(result.status).json(result);
-// });
-
-
-// app.get('/country', async (req , res) => {
-//   let pageSize = parseInt(req.query.pageSize) || 80;
-//   let page = parseInt(req.query.page) || 1;
-//   let q = req.query.q || 'in';
-  
-// const d = new Date();
-// const date=`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()-1}`
-
-
-
-//   let url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(q)}&from=${date}&to=${date}&page=${page}&pageSize=${pageSize}&apiKey=${process.env.API_KEY}`
-//   const result = await makeApiRequest(url);
-//   res.status(result.status).json(result);
-// })
 
 // Import the middleware and other required modules
 const authenticateToken = require('./middleware/authenticateToken');
